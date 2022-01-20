@@ -1,6 +1,6 @@
 andrewrothstein.mkcert
 =========
-[![Build Status](https://travis-ci.org/andrewrothstein/ansible-mkcert.svg?branch=master)](https://travis-ci.org/andrewrothstein/ansible-mkcert)
+![Build Status](https://github.com/andrewrothstein/ansible-mkcert/actions/workflows/build.yml/badge.svg)
 
 Installs [mkcert](https://github.com/FiloSottile/mkcert)
 
