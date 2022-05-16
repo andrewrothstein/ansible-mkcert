@@ -10,7 +10,7 @@
       paths:
         - '{{ role_path }}/vars'
 - name: downloading {{ mkcert_url }} to {{ mkcert_install_exe }}...
-  become: yes
+  become: true
   become_user: root
   get_url:
     url: '{{ mkcert_url }}'
@@ -18,7 +18,7 @@
     checksum: '{{ mkcert_checksum }}'
     mode: 0755
 - name: link {{ mkcert_link }} to {{ mkcert_install_exe }}...
-  become: yes
+  become: true
   become_user: root
   file:
     src: '{{ mkcert_install_exe }}'
