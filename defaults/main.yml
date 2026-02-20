@@ -2,8 +2,11 @@
 # defaults file for mkcert
 mkcert_ver: v1.4.4
 mkcert_mirror: https://github.com/FiloSottile/mkcert/releases/download
-mkcert_os: linux
-mkcert_arch: amd64
+mkcert_arch_map:
+  aarch32: arm
+  aarch64: arm64
+  arm64: arm64
+  x86_64: amd64
 mkcert_install_dir: /usr/local/bin
 mkcert_checksums:
   v1.4.3:

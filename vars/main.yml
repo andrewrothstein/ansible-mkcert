@@ -1,5 +1,7 @@
 ---
 # vars file for mkcert
+mkcert_os: '{{ ansible_facts["system"] | lower }}'
+mkcert_arch: '{{ mkcert_arch_map[ansible_facts["architecture"]] }}'
 mkcert_platform: '{{ mkcert_os }}-{{ mkcert_arch }}'
 mkcert_exe: 'mkcert-{{ mkcert_ver }}-{{ mkcert_platform }}{{ mkcert_dotexe | default("") }}'
 mkcert_url: '{{ mkcert_mirror }}/{{ mkcert_ver }}/{{ mkcert_exe }}'

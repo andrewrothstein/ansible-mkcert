@@ -10,26 +10,29 @@ galaxy_info:
     - name: Alpine
       versions:
         - all
-    - name: Archlinux
+    - name: ArchLinux
       versions:
         - all
     - name: Debian
       versions:
-        - bullseye
-        - buster
+        - bookworm
+        - trixie
     - name: EL
       versions:
-        - 8
+        - '10'
+        - '9'
     - name: Fedora
       versions:
-        - 35
-        - 36
+        - all
+    - name: Kali
+      versions:
+        - all
     - name: Ubuntu
       versions:
-        - bionic
-        - focal
+        - jammy
+        - noble
   galaxy_tags:
     - development
   role_name: mkcert
-
+  namespace: andrewrothstein
 dependencies: []
