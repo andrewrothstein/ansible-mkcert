@@ -1,10 +1,14 @@
 ---
-- hosts: all
-  roles:
-  - role: '{{ playbook_dir }}'
+- name: Testing andrewrothstein.mkcert
+  hosts: all
   tasks:
-  - command: /usr/local/bin/mkcert --version
-    register: mkcert_test_output
-  - name: mkcert --version
-    debug:
-      msg: '{{ mkcert_test_output.stdout }}'
+    - name: Installing andrewrothstein.mkcert
+      ansible.builtin.include_role:
+        name: '{{ playbook_dir }}'
+    - name: Executing 'mkcert --version'
+      ansible.builtin.command: mkcert --version
+      changed_when: false
+      register: mkcert_test_output
+    - name: Output from 'mkcert --version'
+      ansible.builtin.debug:
+        msg: '{{ mkcert_test_output.stdout }}'
