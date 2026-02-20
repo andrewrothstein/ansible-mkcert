@@ -3,9 +3,8 @@ galaxy_info:
   author: Andrew Rothstein
   description: installs mkcert
   company: BlackRock Financial Management
-  license:
-    - MIT
-  min_ansible_version: 2.0
+  license: MIT
+  min_ansible_version: '2.0'
   platforms:
     - name: Alpine
       versions:
